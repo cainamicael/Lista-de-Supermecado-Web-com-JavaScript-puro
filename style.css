@@ -1,0 +1,268 @@
+/* Reset de estilos básicos */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Estilos gerais */
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+    color: #333;
+    line-height: 1.5;
+  }
+  
+  .container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  header {
+    text-align: center;
+    margin-bottom: 40px;
+  }
+  
+  h2 {
+    font-size: 36px;
+    font-weight: bold;
+    color: #333;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+  }
+  
+  .lista-cadastro {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 40px;
+  }
+  
+  .lista-cadastro input {
+    padding: 12px;
+    border: 2px solid #333;
+    border-radius: 4px;
+    margin: 10px;
+    font-size: 16px;
+    background-color: #fff;
+    color: #333;
+  }
+  
+  .lista-cadastro input[type="submit"] {
+    background-color: #0a7fad;
+    color: #fff;
+    border: none;
+    padding: 12px 24px;
+    cursor: pointer;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: background-color 0.3s ease;
+    font-size: 16px;
+  }
+  
+
+  
+  .lista-cadastro input[type="submit"]:hover {
+    background-color: #1f9fd2;
+  }
+  
+  .lista-produtos {
+    margin-bottom: 40px;
+  }
+  
+  .lista-produto-single {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 4px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .lista-produto-single h3 {
+    font-size: 20px;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  .lista-produto-single .price-produto {
+    color: #333;
+    font-size: 18px;
+  }
+  
+  .remover {
+    background-color: #e60b0b;
+    color: #fff;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 30px;
+    cursor: pointer;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: background-color 0.3s ease;
+    font-size: 14px;
+  }
+  
+  .remover:hover {
+    background-color: #c91111;
+  }
+  
+  .soma-produto {
+    text-align: center;
+    margin-bottom: 40px;
+  }
+  
+  .soma-produto h1 {
+    font-size: 36px;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  .btn {
+    text-align: center;
+  }
+  
+  .btn button {
+    background-color: #0a7fad;
+    color: #fff;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 30px;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .btn button:hover {
+    background-color: #1f9fd2;
+  }
+  
+  @media screen and (max-width: 600px) {
+    h2 {
+      font-size: 28px;
+    }
+  
+    .lista-cadastro input {
+      width: 100%;
+      margin: 10px 0;
+    }
+  
+    .lista-cadastro input[type="submit"] {
+      margin: 10px 0;
+    }
+  }  
+  
+/* css do curso
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+    
+}
+
+header {
+    background-color: rgb(120, 55, 194);
+    text-align: center;
+    color: white;
+    padding: 20px 0;
+    
+}
+
+.lista-cadastro {
+    display: flex;
+    margin: 20px 0;
+    padding: 20px;
+
+}
+
+.lista-cadastro input[type=text] {
+    flex: 1;
+    height: 40px;
+    padding-left: 20px;
+
+}
+
+.lista-cadastro input[type=submit] {
+    padding: 8px 8px;
+    background-color: rgb(120, 55, 194);
+    color: white;
+    border: 0;
+
+}
+
+.lista-produto-single {
+    padding: 10px 0;
+    margin: 20px 0;
+    border-bottom: 1px solid #ccc;
+    display: flex;
+
+}
+
+.lista-produto-single h3{
+    flex: 1;
+    padding: 0 20px;
+
+}
+
+h3.price-produto {
+    text-align: right;
+    font-size: 17px;
+
+}
+
+.price-produto > span {
+    background-color: rgb(120, 55, 194);
+    padding: 8px 10px;
+    border-radius: 20px;
+    color: white;
+
+}
+
+.soma-produto {
+    margin: 20px;
+    text-align: center;
+
+}
+
+button {
+    cursor: pointer;
+    border: 0;
+
+}
+
+.btn {
+    width: 6%;
+    margin: 0 auto;
+
+}
+
+#limpar {
+    background-color: rgb(120, 55, 194);
+    padding: 8px 10px;
+    border-radius: 20px;
+    color: white;
+    margin: 20px;
+
+}
+
+.remover {
+    background-color: rgb(194, 55, 55);
+    padding: 4px 4px;
+    border-radius: 40px;
+    font-size: 15px;
+    margin-right: 20px;
+    color: white;
+
+
+}
+*/
