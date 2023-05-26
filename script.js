@@ -23,7 +23,19 @@ document.querySelector('input[type=submit]')
                 var listaProdutos = document.querySelector('.lista-produtos')
                 var somatorio = itens.map(i => i.valor).reduce((a, c) => a + c)
                 listaProdutos.innerHTML = '' //Para não ficar duplicando
-        
+
+                //Vamos deixar no formato de pilha
+                for(var index = (itens.length) -1; index >= 0; index--) {
+                    let val = itens[index]
+                    listaProdutos.innerHTML += `
+                        <div class="lista-produto-single">
+                            <h3>${index+1} ${val.nome}</h3>
+                            <h3 class="price-produto"><span>R$${(val.valor).toFixed(2)}</span></h3>
+                            <button class="remover" onclick="removerItem(${index})">remover</button>
+                        </div>`
+                }
+
+/*                //Formato de fila
                 itens.forEach((val, index) => {
                     listaProdutos.innerHTML += `
                         <div class="lista-produto-single">
@@ -32,6 +44,8 @@ document.querySelector('input[type=submit]')
                             <button class="remover" onclick="removerItem(${index})">remover</button>
                         </div>`
                 })
+*/
+
             }
         
                 //Limpando os inputs
@@ -65,6 +79,18 @@ function removerItem(index) {
         var somatorio = itens.map(i => i.valor).reduce((a, c) => a + c)
         listaProdutos.innerHTML = ''
 
+        //Vamos deixar no formato de pilha
+        for(var index = (itens.length) -1; index >= 0; index--) {
+            let val = itens[index]
+            listaProdutos.innerHTML += `
+                <div class="lista-produto-single">
+                    <h3>${index+1} ${val.nome}</h3>
+                    <h3 class="price-produto"><span>R$${(val.valor).toFixed(2)}</span></h3>
+                    <button class="remover" onclick="removerItem(${index})">remover</button>
+                </div>`
+        }
+
+/*                //Formato de fila
         itens.forEach((val, index) => {
             listaProdutos.innerHTML += `
                 <div class="lista-produto-single">
@@ -73,6 +99,7 @@ function removerItem(index) {
                     <button class="remover" onclick="removerItem(${index})">remover</button>
                 </div>`
         })
+*/
 
         let elementoSoma = document.querySelector('.soma-produto h1')
         elementoSoma.innerHTML = `Total: R$ ${somatorio.toFixed(2)}`
