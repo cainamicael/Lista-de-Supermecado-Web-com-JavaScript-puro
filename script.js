@@ -12,7 +12,7 @@ document.querySelector('input[type=submit]')
             quantidade = 1
         }
 
-        if(nomeProduto.value != '' && precoProduto.value != '' && quantidade >= 1) {
+        if(precoProduto.value != '' && quantidade >= 1) {
             for(var i = 0; i < quantidade; i++) {
                 itens.push({ //Pega os valores do input e adiciona no array
                     nome: nomeProduto.value,
@@ -27,7 +27,7 @@ document.querySelector('input[type=submit]')
                 itens.forEach((val, index) => {
                     listaProdutos.innerHTML += `
                         <div class="lista-produto-single">
-                            <h3>${val.nome}</h3>
+                            <h3>${index+1} ${val.nome}</h3>
                             <h3 class="price-produto"><span>R$${(val.valor).toFixed(2)}</span></h3>
                             <button class="remover" onclick="removerItem(${index})">remover</button>
                         </div>`
@@ -68,7 +68,7 @@ function removerItem(index) {
         itens.forEach((val, index) => {
             listaProdutos.innerHTML += `
                 <div class="lista-produto-single">
-                    <h3>${val.nome}</h3>
+                    <h3>${index+1} ${val.nome}</h3>
                     <h3 class="price-produto"><span>R$${(val.valor).toFixed(2)}</span></h3>
                     <button class="remover" onclick="removerItem(${index})">remover</button>
                 </div>`
